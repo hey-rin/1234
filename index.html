@@ -571,12 +571,12 @@ body .brand,body .brand [data-editable]{font-family:Georgia,"Times New Roman",se
   leaf.style.setProperty('--size',`${16+Math.random()*13}px`);
   leaf.style.setProperty('--duration',`${10+Math.random()*6}s`);
   leaf.style.setProperty('--delay',`${Math.random()*6}s`);
-  leaf.style.setProperty('--rotation',`${Math.random()*120-60}deg`);
+  leaf.style.animationIterationCount='infinite';leaf.style.setProperty('--rotation',`${Math.random()*120-60}deg`);
   leaf.style.setProperty('--drift',`${Math.random()*140-70}px`);
   layer.append(leaf);
  }
- setTimeout(()=>layer.classList.add('is-ending'),20000);
- setTimeout(()=>layer.remove(),23000);
+ setTimeout(()=>layer.classList.add('is-ending'),58000);
+ setTimeout(()=>layer.remove(),60000);
 })();
 </script>
 
