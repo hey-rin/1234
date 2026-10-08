@@ -487,7 +487,7 @@ body .brand,body .brand [data-editable]{font-family:Georgia,"Times New Roman",se
     document.getElementById('mealWeekLabel').textContent=`${week.getUTCFullYear()}년 ${label(week)} ~ ${label(end)}`;
     board.replaceChildren();board.contentEditable='false';
     for(let i=0;i<7;i++){
-      const day=new Date(week);day.setUTCDate(day.getUTCDate()+i);const key=dateKey(day),menu=monthlyMenus[key],row=document.createElement('div');
+      const day=new Date(week);day.setUTCDate(day.getUTCDate()+i);const key=dateKey(day);if(key<today)continue;const menu=monthlyMenus[key],row=document.createElement('div');
       row.className='menu-day'+(key===today?' today':'');if(key===today)row.setAttribute('aria-current','date');
       const heading=document.createElement('strong');heading.textContent=`${label(day)} (${'일월화수목금토'[day.getUTCDay()]})${key===today?' · 오늘':''}`;row.append(heading);
       if(menu&&['lunch','dinner','morningSnack','afternoonSnack'].some(k=>menu[k].length)){
@@ -497,6 +497,7 @@ body .brand,body .brand [data-editable]{font-family:Georgia,"Times New Roman",se
       }else{const empty=document.createElement('p');empty.className='meal-empty';empty.textContent=menu?'등록된 식단 없음 (월간 식단표 공란)':'등록된 식단 없음 (해당 월 식단표 필요)';row.append(empty);}
       board.append(row);
     }
+    if(!board.children.length){const empty=document.createElement('p');empty.className='meal-empty';empty.textContent='지나간 날짜의 식단은 표시하지 않습니다. 이번 주 또는 다음 주를 선택해 주세요.';board.append(empty)}
   }
   document.getElementById('mealPrev').addEventListener('click',()=>{week.setUTCDate(week.getUTCDate()-7);render()});
   document.getElementById('mealNext').addEventListener('click',()=>{week.setUTCDate(week.getUTCDate()+7);render()});
