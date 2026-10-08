@@ -78,11 +78,11 @@
 
 
 
-@font-face{font-family:"HelloKCCMureok";src:url("assets/kcc-mureok.ttf") format("truetype");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"HelloKCCMureok";src:url("kcc-mureok.ttf") format("truetype");font-weight:100 900;font-style:normal;font-display:swap}
 #liveDate,#liveTime,#events .month-heading h1,#transport>.section-head h2,#staff>.section-head h2,#communication>.section-head h2,#meals>.section-head h2,#exercise>.section-head h2,#daily-life>.section-head h2{font-family:"HelloKCCMureok","KCC무럭무럭",sans-serif!important;letter-spacing:normal!important}
 
-@font-face{font-family:"HelloNanumBarun";src:url("assets/nanum-barun-gothic.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:"HelloNanumBarun";src:url("assets/nanum-barun-gothic-bold.ttf") format("truetype");font-weight:700 900;font-style:normal;font-display:swap}
+@font-face{font-family:"HelloNanumBarun";src:url("nanum-barun-gothic.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"HelloNanumBarun";src:url("nanum-barun-gothic-bold.ttf") format("truetype");font-weight:700 900;font-style:normal;font-display:swap}
 body,body *{font-family:"HelloNanumBarun","나눔바른고딕",sans-serif!important}
 #liveDate,#liveTime,#events .month-heading h1,#events .month-heading h1 *,#transport>.section-head h2,#transport>.section-head h2 *,#staff>.section-head h2,#staff>.section-head h2 *,#communication>.section-head h2,#communication>.section-head h2 *,#meals>.section-head h2,#meals>.section-head h2 *,#exercise>.section-head h2,#exercise>.section-head h2 *,#daily-life>.section-head h2,#daily-life>.section-head h2 *{font-family:"HelloKCCMureok","KCC무럭무럭",sans-serif!important}
 body .title-emoji,body .zodiac-emoji{font-family:"Apple Color Emoji","Segoe UI Emoji",sans-serif!important}
@@ -97,7 +97,7 @@ body .brand,body .brand [data-editable]{font-family:Georgia,"Times New Roman",se
   <header>
     <div class="wrap masthead">
       <div class="datebox"><strong id="todayDate">2026년 10월 7일</strong><br><span id="weekday">수요일 · 부산</span></div>
-      <div class="brand"><span data-editable>HELLO DAILY</span><img src="assets/bear-red-ribbon.png" alt="빨간 리본을 단 곰돌이" width="70" height="70"></div>
+      <div class="brand"><span data-editable>HELLO DAILY</span><img src="bear-red-ribbon.png" alt="빨간 리본을 단 곰돌이" width="70" height="70"></div>
       <div class="header-actions"><button class="pill" onclick="window.print()">인쇄</button><button class="edit-toggle" id="editBtn">내용 편집</button></div>
     </div>
     <nav class="nav" aria-label="주요 메뉴"><div class="wrap">
@@ -111,7 +111,7 @@ body .brand,body .brand [data-editable]{font-family:Georgia,"Times New Roman",se
         <a href="https://vclock.kr/time/%EC%84%9C%EC%9A%B8/" target="_blank" rel="noopener">대한민국 표준시간 자세히 보기</a>
       </article>
     </section>
-    <section class="music-card" aria-label="오늘의 음악"><div class="music-head"><div><div class="kicker">TODAY'S MUSIC · HELLO DAILY</div><h2><span class="lp-disc" aria-hidden="true"></span> 오늘의 음악 🎵</h2><div class="meta">All I Want for Christmas Is You</div></div></div><audio id="backgroundMusic" controls autoplay loop preload="auto" aria-label="배경음악 재생 및 음량 조절"><source src="assets/background-music.mp3" type="audio/mpeg">브라우저에서 오디오 재생을 지원하지 않습니다.</audio><div class="music-actions"><button type="button" id="musicToggle" aria-controls="backgroundMusic">▶ 음악 재생</button><span id="musicStatus" role="status">음악 자동재생을 준비하고 있습니다.</span></div></section>
+    <section class="music-card" aria-label="오늘의 음악"><div class="music-head"><div><div class="kicker">TODAY'S MUSIC · HELLO DAILY</div><h2><span class="lp-disc" aria-hidden="true"></span> 오늘의 음악 🎵</h2><div class="meta">All I Want for Christmas Is You</div></div></div><audio id="backgroundMusic" controls autoplay loop preload="auto" aria-label="배경음악 재생 및 음량 조절"><source src="background-music.mp3" type="audio/mpeg">브라우저에서 오디오 재생을 지원하지 않습니다.</audio><div class="music-actions"><button type="button" id="musicToggle" aria-controls="backgroundMusic">▶ 음악 재생</button><span id="musicStatus" role="status">음악 자동재생을 준비하고 있습니다.</span></div></section>
     <section id="events" class="month-main">
       <div class="month-heading">
         <div><div class="kicker">MONTHLY CENTER CALENDAR</div><h1><span>10월</span> 달력 <span class="title-emoji" aria-hidden="true">📅</span></h1></div>
@@ -241,7 +241,7 @@ body .brand,body .brand [data-editable]{font-family:Georgia,"Times New Roman",se
 
     <section id="meals" class="section">
       <div class="section-head"><h2>주간 식단 · 오늘의 간식 <span class="title-emoji" aria-hidden="true">🍱</span></h2><span class="section-num">06</span></div>
-<div class="meal-controls"><div><div class="kicker">MONTHLY MENU · 정성담은재활주간보호센터</div><strong id="mealWeekLabel"></strong></div><div class="meal-buttons"><button type="button" id="mealPrev">이전 주</button><button type="button" id="mealCurrent">이번 주</button><button type="button" id="mealNext">다음 주</button><a href="assets/monthly-menu-2026-10.xlsx" download>10월 식단표 다운로드</a></div></div>
+<div class="meal-controls"><div><div class="kicker">MONTHLY MENU · 정성담은재활주간보호센터</div><strong id="mealWeekLabel"></strong></div><div class="meal-buttons"><button type="button" id="mealPrev">이전 주</button><button type="button" id="mealCurrent">이번 주</button><button type="button" id="mealNext">다음 주</button><a href="monthly-menu-2026-10.xlsx" download>10월 식단표 다운로드</a></div></div>
       <div class="meal-grid">
         <div class="menu-list" id="weeklyMenu" data-editable>
           <div class="menu-day"><strong>월</strong><span>잡곡밥 · 소고기무국 · 계란찜</span><span>간식: 바나나 우유</span></div>
@@ -251,7 +251,7 @@ body .brand,body .brand [data-editable]{font-family:Georgia,"Times New Roman",se
           <div class="menu-day"><strong>금</strong><span>영양밥 · 콩나물국 · 소불고기</span><span>간식: 요구르트</span></div>
         </div>
         <aside class="food-hero">
-          <div class="food-photo-frame"><img class="food-photo" id="seasonalPhoto" src="assets/seasonal-autumn-menu-strip.png" alt="오늘의 제철 저녁 추천 메뉴"></div>
+          <div class="food-photo-frame"><img class="food-photo" id="seasonalPhoto" src="seasonal-autumn-menu-strip.png" alt="오늘의 제철 저녁 추천 메뉴"></div>
           <div><span class="kicker" style="color:#ff6b70">오늘의 제철 저녁 추천</span><h3 id="seasonalTitle">가을 버섯 들깨전골</h3><p id="seasonalDesc">향긋한 버섯과 부드러운 두부를 들깨 육수에 끓인 따뜻한 한 그릇입니다.</p></div>
           <div><p class="ingredients" id="seasonalIngredients">표고버섯 · 느타리버섯 · 두부 · 들깨가루 · 대파</p><span class="meta" style="color:#aaa">※ 개인별 알레르기·저작 상태를 확인하세요.</span></div>
         </aside>
@@ -275,7 +275,7 @@ body .brand,body .brand [data-editable]{font-family:Georgia,"Times New Roman",se
     <section id="exercise" class="section">
       <div class="section-head"><h2>낙상 예방 운동 <span class="title-emoji" aria-hidden="true">🤸</span></h2><span class="section-num">07</span></div>
       <div class="exercise">
-        <div class="exercise-intro"><img class="exercise-photo" src="assets/fall-prevention-heel-raise.png" alt="어르신이 의자를 잡고 직원의 도움을 받아 뒤꿈치 들기 운동을 하는 모습"><span class="kicker" style="color:#fff" id="exerciseWeekLabel">이번 주 · 매일 10분</span><span class="image-caption">직원이 곁에서 보조하며 안정된 의자를 사용하세요.</span><div class="big">10′</div><h3 id="exerciseProgramTitle">의자 곁에서<br>천천히, 안전하게</h3><p id="exerciseProgramDesc">통증이나 어지럼이 있으면 즉시 멈추고 담당자에게 알립니다.</p></div>
+        <div class="exercise-intro"><img class="exercise-photo" src="fall-prevention-heel-raise.png" alt="어르신이 의자를 잡고 직원의 도움을 받아 뒤꿈치 들기 운동을 하는 모습"><span class="kicker" style="color:#fff" id="exerciseWeekLabel">이번 주 · 매일 10분</span><span class="image-caption">직원이 곁에서 보조하며 안정된 의자를 사용하세요.</span><div class="big">10′</div><h3 id="exerciseProgramTitle">의자 곁에서<br>천천히, 안전하게</h3><p id="exerciseProgramDesc">통증이나 어지럼이 있으면 즉시 멈추고 담당자에게 알립니다.</p></div>
         <div class="steps" id="exerciseSteps">
           <div class="step"><div><h3>발목 펌프</h3><p>의자에 바르게 앉아 발끝을 몸 쪽과 바깥쪽으로 천천히 10회 움직입니다.</p></div></div>
           <div class="step"><div><h3>무릎 펴기</h3><p>한쪽 다리를 앞으로 펴고 3초 유지합니다. 양쪽 각 5회 반복합니다.</p></div></div>
